@@ -11,25 +11,44 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var input: String = ""
-    @State private var items = UserDefaults.standard.stringArray(forKey: "todoList") ?? [String]()
+    @State var input: String = "" // represents user input in "New Item" text field
+    @State var titleInput: String = ""
+    @State private var title: String = UserDefaults.standard.string(forKey: "title") ?? "Enter List Name" // represents list title to be saved
+    @State private var items = UserDefaults.standard.stringArray(forKey: "todoList") ?? [String]() // represents things in todo list
     
+    // Adds todo items into list and saves to bundle
     func addToList() {
-        self.items.append(self.input)
-        self.input = ""
-        UserDefaults.standard.set(self.items, forKey: "todoList")
+        if (self.input != "") {
+            self.items.append(self.input)
+            self.input = ""
+            UserDefaults.standard.set(self.items, forKey: "todoList")
+        }
     }
     
+    // Removes todo items from list and updates bundle
     func removeFromList(name: String) {
         self.items = self.items.filter(){$0 != name}
         UserDefaults.standard.set(self.items, forKey: "todoList")
     }
     
+    // Sets the Title of the ToDo List and saves to bundle
+    func setTitle() {
+        self.title = self.titleInput
+        UserDefaults.standard.set(self.titleInput, forKey: "title")
+    }
+    
+    // Main Body
     var body: some View {
+        // Upper quarter of screen
         VStack(alignment: .center) {
-            Text("To-Do List")
+            TextField(title, text: $titleInput,
+                onCommit: {
+                    self.setTitle()
+            })
+                .padding()
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             HStack {
                 TextField("New Item", text: $input,
                     onCommit: {
@@ -46,9 +65,11 @@ struct ContentView: View {
                 }
                 .padding(.trailing)
             }
+            // ToDo List
             List {
                 if self.items.count != 0 {
                     ForEach(items, id: \.self) { item in
+                        // ToDo List Row contents
                         HStack {
                             Text(item)
                                 .onTapGesture {
@@ -62,9 +83,11 @@ struct ContentView: View {
                                     .foregroundColor(.red)
                             }
                         }
+                        .padding()
                     }
                 }
             }
+            .padding(.trailing)
         }
         .padding(.top)
     }   

@@ -5,6 +5,8 @@
 //  Created by Jay Lin on 6/15/20.
 //  Copyright © 2020 Jay Lin. All rights reserved.
 //
+//  App Icon made by Freepik from www.flaticon.com
+//
 
 import UIKit
 import CoreData
