@@ -104,7 +104,7 @@ struct TestUsername : View {
        
        // auto focus
        @State private var isUsernameFirstResponder: Bool? = true
-       @State private var usernamePlaceHolder = "username"
+       @State private var usernamePlaceHolder = "hello.hi"
     
     var body: some View {
         ZStack {
@@ -126,7 +126,8 @@ struct TestUsername : View {
                 } // h
                     .padding()
                     .background(Capsule()
-                        .fill(Color.blue))
+                        .fill(Color.white)
+                        .border(Color.black))
             } // vstack
                 .padding(.horizontal, 20)
         } // zstack
@@ -135,7 +136,7 @@ struct TestUsername : View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        ContentView()
-        TestUsername()
+        ContentView()
+//        TestUsername()
     }
 }
