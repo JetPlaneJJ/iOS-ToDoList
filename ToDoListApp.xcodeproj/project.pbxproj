@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00FDA424EC865E00313450 /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE00FDA324EC865E00313450 /* DroidSansMono.ttf */; };
+		CE00FDA624EC86A600313450 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00FDA524EC86A600313450 /* CustomTextField.swift */; };
+		CE00FDA824EC872D00313450 /* BRCandorLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE00FDA724EC872D00313450 /* BRCandorLight.otf */; };
+		CE68DA802501929900724A30 /* AutoFocusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68DA7F2501929900724A30 /* AutoFocusTextField.swift */; };
+		CE68DA822501932300724A30 /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68DA812501932300724A30 /* TextBindingManager.swift */; };
 		CE83A88A2498184C0064F2DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83A8892498184C0064F2DF /* AppDelegate.swift */; };
 		CE83A88C2498184C0064F2DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83A88B2498184C0064F2DF /* SceneDelegate.swift */; };
 		CE83A88F2498184C0064F2DF /* TestApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE83A88D2498184C0064F2DF /* TestApplication.xcdatamodeld */; };
@@ -16,6 +21,9 @@
 		CE83A8992498184E0064F2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE83A8972498184E0064F2DF /* LaunchScreen.storyboard */; };
 		CE83A8A42498184E0064F2DF /* ToDoListAppTests in Sources */ = {isa = PBXBuildFile; fileRef = CE83A8A32498184E0064F2DF /* ToDoListAppTests */; };
 		CE83A8AF2498184E0064F2DF /* ToDoListAppUITests in Sources */ = {isa = PBXBuildFile; fileRef = CE83A8AE2498184E0064F2DF /* ToDoListAppUITests */; };
+		CE879CF924FDAC41001A4DAF /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879CF824FDAC41001A4DAF /* ListView.swift */; };
+		CE879CFC24FDAD7A001A4DAF /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = CE879CFB24FDAD7A001A4DAF /* SwiftUIPager */; };
+		CE879D3A24FDB053001A4DAF /* Feed-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879D3924FDB053001A4DAF /* Feed-iOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE00FDA324EC865E00313450 /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
+		CE00FDA524EC86A600313450 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CE00FDA724EC872D00313450 /* BRCandorLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BRCandorLight.otf; sourceTree = "<group>"; };
+		CE68DA7F2501929900724A30 /* AutoFocusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFocusTextField.swift; sourceTree = "<group>"; };
+		CE68DA812501932300724A30 /* TextBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
 		CE83A8862498184C0064F2DF /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE83A8892498184C0064F2DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE83A88B2498184C0064F2DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +64,8 @@
 		CE83A8AA2498184E0064F2DF /* ToDoListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE83A8AE2498184E0064F2DF /* ToDoListAppUITests */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDoListAppUITests; sourceTree = "<group>"; };
 		CE83A8B02498184E0064F2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE879CF824FDAC41001A4DAF /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		CE879D3924FDB053001A4DAF /* Feed-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed-iOS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE879CFC24FDAD7A001A4DAF /* SwiftUIPager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +94,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE68DA7D2501926D00724A30 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				CE879D3924FDB053001A4DAF /* Feed-iOS.swift */,
+				CE00FDA524EC86A600313450 /* CustomTextField.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
+		CE68DA7E2501928300724A30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE83A8902498184C0064F2DF /* ContentView.swift */,
+				CE879CF824FDAC41001A4DAF /* ListView.swift */,
+				CE68DA7F2501929900724A30 /* AutoFocusTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE68DA832501932C00724A30 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CE68DA812501932300724A30 /* TextBindingManager.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		CE83A87D2498184C0064F2DF = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +144,17 @@
 		CE83A8882498184C0064F2DF /* ToDoListApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE00FDA724EC872D00313450 /* BRCandorLight.otf */,
+				CE00FDA324EC865E00313450 /* DroidSansMono.ttf */,
 				CE83A8892498184C0064F2DF /* AppDelegate.swift */,
 				CE83A88B2498184C0064F2DF /* SceneDelegate.swift */,
-				CE83A8902498184C0064F2DF /* ContentView.swift */,
 				CE83A8922498184E0064F2DF /* Assets.xcassets */,
 				CE83A8972498184E0064F2DF /* LaunchScreen.storyboard */,
 				CE83A89A2498184E0064F2DF /* Info.plist */,
 				CE83A88D2498184C0064F2DF /* TestApplication.xcdatamodeld */,
+				CE68DA7E2501928300724A30 /* Views */,
+				CE68DA832501932C00724A30 /* Other */,
+				CE68DA7D2501926D00724A30 /* Unused */,
 				CE83A8942498184E0064F2DF /* Preview Content */,
 			);
 			path = ToDoListApp;
@@ -155,6 +202,9 @@
 			dependencies = (
 			);
 			name = ToDoListApp;
+			packageProductDependencies = (
+				CE879CFB24FDAD7A001A4DAF /* SwiftUIPager */,
+			);
 			productName = TestApplication;
 			productReference = CE83A8862498184C0064F2DF /* ToDoListApp.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +277,9 @@
 				Base,
 			);
 			mainGroup = CE83A87D2498184C0064F2DF;
+			packageReferences = (
+				CE879CFA24FDAD7A001A4DAF /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+			);
 			productRefGroup = CE83A8872498184C0064F2DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE83A8992498184E0064F2DF /* LaunchScreen.storyboard in Resources */,
+				CE00FDA424EC865E00313450 /* DroidSansMono.ttf in Resources */,
 				CE83A8962498184E0064F2DF /* Preview Assets.xcassets in Resources */,
+				CE00FDA824EC872D00313450 /* BRCandorLight.otf in Resources */,
 				CE83A8932498184E0064F2DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +325,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE68DA822501932300724A30 /* TextBindingManager.swift in Sources */,
 				CE83A88A2498184C0064F2DF /* AppDelegate.swift in Sources */,
 				CE83A88C2498184C0064F2DF /* SceneDelegate.swift in Sources */,
+				CE879CF924FDAC41001A4DAF /* ListView.swift in Sources */,
 				CE83A8912498184C0064F2DF /* ContentView.swift in Sources */,
+				CE879D3A24FDB053001A4DAF /* Feed-iOS.swift in Sources */,
+				CE68DA802501929900724A30 /* AutoFocusTextField.swift in Sources */,
 				CE83A88F2498184C0064F2DF /* TestApplication.xcdatamodeld in Sources */,
+				CE00FDA624EC86A600313450 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE879CFA24FDAD7A001A4DAF /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE879CFB24FDAD7A001A4DAF /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE879CFA24FDAD7A001A4DAF /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CE83A88D2498184C0064F2DF /* TestApplication.xcdatamodeld */ = {

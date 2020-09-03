@@ -93,8 +93,49 @@ struct ContentView: View {
     }   
 }
 
+struct TestUsername : View {
+    @ObservedObject var textBindingManager = TextBindingManager(limit: 15)
+    
+    // prevent users from signing up with same username
+       @State private var isAvailable = 2
+       @State private var moveForward = false
+       
+       @State private var loading = false // loading wheel
+       
+       // auto focus
+       @State private var isUsernameFirstResponder: Bool? = true
+       @State private var usernamePlaceHolder = "username"
+    
+    var body: some View {
+        ZStack {
+            VStack {
+                HStack {
+                    Text("@")
+
+                    AutoFocusTextField(text: self.$textBindingManager.text, nextResponder: .constant(nil), isResponder: self.$isUsernameFirstResponder, placeholder: self.$usernamePlaceHolder, isSecured: false, keyboard: .default)
+                        .frame(height: 20)
+                    
+                    if self.isAvailable == 1 {
+                        Image("green-check")
+                    } else if self.isAvailable == 2 {
+                        Image("red-x")
+                            .onTapGesture {
+                                self.textBindingManager.text = ""
+                        }
+                    }
+                } // h
+                    .padding()
+                    .background(Capsule()
+                        .fill(Color.blue))
+            } // vstack
+                .padding(.horizontal, 20)
+        } // zstack
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+//        ContentView()
+        TestUsername()
     }
 }
